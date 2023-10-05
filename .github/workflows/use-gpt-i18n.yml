@@ -1,0 +1,20 @@
+name: Demo use of GPT-i18n
+
+on:
+  pull_request:
+    types: [opened]
+  push:
+    branches: "**"
+
+jobs:
+  run-on-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: My step
+        uses: docker://balverine/gpt-i18n:latest
+        with:
+          input1: "value"
