@@ -15,6 +15,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Use GPT-i18n
-        uses: docker://balverine/gpt-i18n:latest
+        uses: docker://balverine/gpt-i18n:1
         with:
-          input1: "value"
+          input1: "hello"
+          input2: "world"
