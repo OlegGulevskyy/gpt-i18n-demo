@@ -17,5 +17,5 @@ jobs:
       - name: Use GPT-i18n
         uses: docker://balverine/gpt-i18n:latest
         with:
-          input1: "hello"
+          input1: "hei"
           input2: "world"
