@@ -18,7 +18,7 @@ jobs:
         run: uname -m
 
       - name: Use GPT-i18n
-        uses: docker://balverine/gpt-i18n:1
+        uses: docker://balverine/gpt-i18n:latest
         with:
           input1: "hiya"
           input2: "world"
