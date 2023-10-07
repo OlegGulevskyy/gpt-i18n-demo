@@ -18,7 +18,7 @@ jobs:
         uses: docker://balverine/gpt-i18n:latest
         with:
           GPT_TRANSLATE_TO_LANGS: "fr,ru"
-          GPT_OPENAI_KEY: {{ secrets.GPT_OPENAI_KEY }}
+          GPT_OPENAI_KEY: ${{ secrets.GPT_OPENAI_KEY }}
           GPT_GLOB_TECH: documents/en/**/*.md
           GPT_GLOB_MISC: documents/tech/**/*.md
           GPT_GLOB_SOLO_FILE: documents/separate.md
