@@ -14,11 +14,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Log Sys Arch
-        run: uname -m
-
       - name: Use GPT-i18n
         uses: docker://balverine/gpt-i18n:latest
         with:
-          input1: "hiya"
-          input2: "world"
+          GPT_TRANSLATE_TO_LANGS: "fr,ru"
+          GPT_OPENAI_KEY: {{ secrets.GPT_OPENAI_KEY }}
+          GPT_GLOB_TECH: documents/en/**/*.md
+          GPT_GLOB_MISC: documents/tech/**/*.md
+          GPT_GLOB_SOLO_FILE: documents/separate.md
